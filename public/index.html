@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="img/Logo_sans_fond.png" />
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Le Lotus Bungalow</title>
+</head>
+
+<body class="overflow-x-hidden">
+    <!--navBar-->
+    <nav class="bg-gray-800 border-green-200 sticky top-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="img/Logo_sans_fond.png" class="h-12" alt="Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-pink-600">Le Lotus
+                    Bungalow</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-green-600 rounded-lg md:hidden hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-200"
+                aria-controls="navbar-default" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="#07df7a"
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <div
+                    class="font-medium flex flex-col p-4 md:p-2 mt-4 border border-gray-100 rounded-lg md:inline-block bg-gray-800 md:mt-0 md:border-0 uppercase relative">
+                    <a href="#" class="text-white md:text-white">accueil</a>
+                    <a href="#propos" class="text-white md:text-white">à propos</a>
+                    <a href="#services" class="text-white md:text-white">services</a>
+                    <a href="#tarifs" class="text-white md:text-white">tarifs</a>
+                    <a href="#contacts" class="text-white md:text-white">contacts</a>
+                    <div class="animation_menu"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Page d'accueil-->
+    <header class="flex flex-col w-full h-full md:w-full md:h-screen md:flex md:flex-row md:pt-4" id="accueils">
+        <div class="md:w-1/2 md:h-full flex flex-col pt-12 px-8 lg:px-8 md:px-4 pb-4 md:pt-16">
+            <h1 class="font-bold text-4xl py-4">Vous cherchez un endroit pour passer vos vacances ?</h1>
+            <p class="text-2xl pt-8 md:p-0">Nous serions ravis de vous accueillir.<br><span
+                    class="text-pink-600 font-bold">Le Lotus Bungalow</span> Foulpointe vous propose un séjour agréable
+                dans un environnement calme et sécurisé, dans nos enceintes : bungalows, restaurant et piscine ...
+            </p>
+            <p class="md:pb-4 pb-8 text-2xl"><span class="text-pink-600 font-bold">Le Lotus</span>
+                <span class="text-green-600 font-bold"> Bungalow,</span> notre histoire ne fait que <span
+                    class="uppercase font-bold text-purple-500">commencer</span>
+            </p>
+            <div class="flex flex-col md:flex-row">
+                <button
+                    class="p-4 font-bold text-xl rounded-lg w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/4 text-green-600 border border-green-600 hover:bg-green-600 hover:text-white transition-all"
+                    id="reservation">Reservation</button>
+                <button
+                    class="p-4 font-bold text-xl rounded-lg w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/4 text-white border border-green-600 bg-green-600 hover:bg-white mt-4 md:mt-0 md:ml-1 hover:text-green-600 transition-all"
+                    id="button_tarif">Tarifs</button>
+            </div>
+        </div>
+        <div class="md:w-1/2 md:h-full flex flex-row overflow-hidden">
+            <img src="img/EXTERIEUR_10.JPG" alt="EXTERIEUR_10"
+                class="w-full h-5/6 rounded-3xl image image1 translate-x-full">
+            <img src="img/EXTERIEUR_11.JPG" alt="EXTERIEUR_11"
+                class="w-full h-5/6 rounded-3xl image image2 translate-x-full">
+            <img src="img/EXTERIEUR_12.JPG" alt="EXTERIEUR_12"
+                class="w-full h-5/6 rounded-3xl image image3 translate-x-full">
+            <img src="img/EXTERIEUR_07.JPG" alt="EXTERIEUR_07"
+                class="w-full h-5/6 rounded-3xl image image4 translate-x-full">
+            <img src="img/EXTERIEUR_15.JPG" alt="EXTERIEUR_15"
+                class="w-full h-5/6 rounded-3xl image image5 translate-x-full">
+            <img src="img/Logo_sans_fond.png" alt="logoOfficiel"
+                class="md:w-9/12 lg:w-full w-4/5 h-5/6  imageLogo translate-x-full">
+        </div>
+    </header>
+    <!--À propos de nous-->
+    <section id="propos">
+        <section class="pt-24">
+            <div class="title">
+                <h1 class="font-bold text-4xl text-pink-600 px-4 py-2 mx-4">
+                    <span class="text-4xl text-green-600">&#8226;</span>
+                    <span class="uppercase">à </span>propos
+                </h1>
+            </div>
+            <div class="flex flex-col md:flex-row lg:flex-row h-full py-8">
+                <div class="w-full md:w-1/2 h-full flex flex-col lg:flex-row items-center pt-0 overflow-hidden">
+                    <video src="img/LE_LOTUS_FINAL_V1.mp4" autoplay muted loop class="rounded-2xl"></video>
+                </div>
+                <div class="w-full md:w-1/2 py-1" id="text_about" data-aos="fade-left" data-aos-duration="1000">
+                    <p class="px-5 py-2 text-xl lg:text-2xl">
+                        <span class="text-green-600 font-bold">Le Lotus </span><span class="text-pink-600 font-bold">
+                            Bungalow </span><span class="text-purple-600 font-bold">
+                            Foulpointe, </span>est un complexe hôtelier situé
+                        au
+                        bord
+                        de route nationale, à 1,3Km de la plage.
+                        <span><br>Soyez accueilli dans notre hall élégant par notre personnel gracieux à
+                            travers
+                            des intérieurs
+                            bien conçu avec une élégance moderne, entouré de verdure luxuriante.
+                            Votre suite offre des intérieurs spacieux et apaisant, avec un éclairage chaleureux,
+                            vivez une sensation inégalée de confort et de tranquillité loin de chez soi.
+                            Savourez les délices de notre restaurant et dégustez des cocktails exclusifs au bar
+                            emblématique, chaque caprice est satisfait avec grâce.
+                        </span>
+                    </p>
+                    <div class="chevron bg-gradient-to-t from-white to-transparent">
+                        <i
+                            class="fa-solid fa-chevron-down text-2xl text-white hover:text-green-600 hover:bg-white border-2 border-green-600 cursor-pointer bg-green-600 p-2 rotate-0 transition-all mr-4 rounded-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--Page de Services-->
+    <section id="services">
+        <div class="bg-cover w-full h-full md:w-full md:h-2/4 flex items-center justify-center py-10 filter brightness-100"
+            style="background-image: url('img/EXTERIEUR_11.JPG'); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; margin-top: 240px;">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="text-center p-4 z-10 mt-8">
+                <h1 class="font-bold text-lg text-pink-600 uppercase">
+                    Le Lotus Bungalow
+                    <br>
+                    <span class="text-green-600 text-4xl">Les Services</span>
+                </h1>
+            </div>
+        </div>
+        <!--Piscine-->
+        <div class="flex flex-wrap overflow-x-hidden my-4 mt-8">
+            <div class="w-full md:w-1/2 px-4" data-aos="zoom-in">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-4xl shadow-pink-600">
+                    <h2 class="font-bold mb-2 text-green-600">Piscine</h2>
+                    <p class="text-xl mt-7">
+                        À proximité, <span class="text-purple-600">la piscine du Lotus Bungalow,</span> est une
+                        invitation permanente à la détente. Les joies de la baignade, les transats confortables,
+                        les draps de bain moelleux, les parasols pour s’abriter du soleil, tout est réuni pour vous
+                        reposer, lire ou ne rien faire du tout !
+                        <br>Aux<span class="text-green-600 font-bold"> Lotus </span><span
+                            class="text-pink-600 font-bold">
+                            Bungalow </span><span class="text-purple-600 font-bold">
+                            Foulpointe, </span>chaque caprice est satisfait avec grâce.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4 mt-8" data-aos="fade-left">
+                <div class="bg-white p-5 rounded-lg shadow-lg shadow-green-600">
+                    <img src="img/406181324_856229849539682_219973314497207142_n.jpg" alt="services1"
+                        class="w-full md:w-9/12 lg:w-full rounded-3xl">
+                </div>
+            </div>
+        </div>
+        <!--Espace de Loisir-->
+        <div class="flex flex-wrap overflow-x-hidden my-4 mt-8">
+            <div class="w-full md:w-1/2 px-4" data-aos="zoom-in">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-4xl shadow-pink-600">
+                    <h2 class="font-bold mb-2 text-purple-600">Espace de Loisir</h2>
+                    <p class="text-xl mt-7">
+                        Le Lotus Bungalow dispose <span class="text-green-600">d’un club de Loisir,</span> accessible
+                        pour tous.
+                        <br>Ouvert les week-ends de 9h30 à 12h30 et de 14h30 à 17h30, ainsi que tous les jours durant
+                        les
+                        vacances scolaires.
+                        <span class="block">
+                            <br>Terminez la journée dans une ambiance nocturne vibrante au bord
+                            de la piscine à partir du coucher du soleil jusqu'à minuit pendant votre
+                            séjour.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4 mt-8" data-aos="fade-left">
+                <div class="bg-white p-5 rounded-lg shadow-lg shadow-green-600">
+                    <img src="img/405200516_856236149539052_360802718447433710_n.jpg" alt="services2"
+                        class="w-full md:w-9/12 lg:w-full rounded-3xl">
+                </div>
+            </div>
+        </div>
+        <!--Connexion Gratuit-->
+        <div class="flex flex-wrap overflow-x-hidden my-4 mt-8">
+            <div class="w-full md:w-1/2 px-4" data-aos="zoom-in">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-4xl shadow-pink-600">
+                    <h2 class="font-bold mb-2 text-green-600">Connexion Gratuit</h2>
+                    <p class="text-xl mt-7">
+                        Profitez de notre <span class="text-purple-600">connexion fibre optique</span> gratuit pendant
+                        votre séjour chez Lotus pour
+                        communiquer à vos amis, votre famille, vos collégues ou alors pour votre travail
+                        ou bien surfer tout simplement sur internet.
+                        <br>100 Go inclus pendant votre séjour pour vous satisfaire, alors venez-vite chez nous et
+                        profitez-en !
+                    </p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4 mt-8" data-aos="fade-left">
+                <div class="bg-white p-5 rounded-lg shadow-lg shadow-green-600">
+                    <img src="img/freeWifi.jpg" class="w-full md:w-9/12 lg:w-full rounded-3xl" alt="services3">
+                </div>
+            </div>
+        </div>
+        <!--Espace de Détente-->
+        <div class="flex flex-wrap overflow-x-hidden my-4 mt-8">
+            <div class="w-full md:w-1/2 px-4" data-aos="zoom-in">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-4xl shadow-pink-600">
+                    <h2 class="font-bold mb-2 text-purple-600">Espace de Détente</h2>
+                    <p class="text-xl mt-7">
+                        Situé à côté du restaurant, <span class="text-green-600">un espace détente</span> vous attend à
+                        toute heure pour un moment de
+                        jeux ou de lecture. Après une journée de réunion ou une après-midi de visites dans la région,
+                        retrouvez notre billard et notre boîte à livres.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4 mt-8" data-aos="fade-left">
+                <div class="bg-white p-5 rounded-lg shadow-lg shadow-green-600">
+                    <img src="img/friends-cheering-while-their-friend-aiming-billiards-ball.jpg" alt="services4"
+                        class="w-full md:w-9/12 lg:w-full rounded-3xl">
+                </div>
+            </div>
+        </div>
+        <!--Restaurant et Pizzeria-->
+        <div class="flex flex-wrap overflow-x-hidden my-4 mt-8">
+            <div class="w-full md:w-1/2 px-4" data-aos="zoom-in">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-4xl shadow-pink-600">
+                    <h2 class="font-bold mb-2 text-green-600">Restaurant et Pizzeria</h2>
+                    <p class="text-xl mt-7">
+                        Découvrez notre restaurant avec des différentes recette spécial Malagasy et étrangère
+                        ainsi que notre pizzeria avec des pizza cuits au feux de bois et encore plus...
+                        <br>Vous pouvez manger dans notre restaurant et pizzeria qui est <span
+                            class="text-purple-600">inclus déjà dans le tarif </span>
+                        ou bien passer juste votre commande et on vous apportera dans votre chambre.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4 mt-8" data-aos="fade-left">
+                <div class="bg-white p-5 rounded-lg shadow-lg shadow-green-600">
+                    <img src="img/320510299_527403422647210_2946860640122560057_n.jpg" alt="services5"
+                        class="w-full md:w-9/12 lg:w-full rounded-3xl">
+                </div>
+            </div>
+        </div>
+        <!--Hébergement-->
+        <div class="flex flex-wrap overflow-x-hidden my-4 mt-8">
+            <div class="w-full md:w-1/2 px-4" data-aos="zoom-in">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-4xl shadow-pink-600">
+                    <h2 class="font-bold mb-2 text-purple-600">Hébergement</h2>
+                    <p class="text-xl mt-7">
+                        Profitez de nos splendide chambres et bungalows pendant vos vacances, l'une des luxieux
+                        et spacieux
+                        au bord de la route nationale numéro 5.
+                        <br>Vous pouvez en choisir un ou plusieurs s'il y a une cuisine ou non selon votre
+                        besoin.
+                        <br><span class="text-green-600">Alors venez-vite chez nous !</span>
+                    </p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4 mt-8" data-aos="fade-left">
+                <div class="bg-white p-5 rounded-lg shadow-lg shadow-green-600">
+                    <img src="img/336675382_1186191992087119_1602348854406235610_n.jpg" alt="services6"
+                        class="w-full md:w-9/12 lg:w-full rounded-3xl">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Page de Tarifs-->
+    <section id="tarifs">
+        <div class="bg-cover w-full h-full md:w-full md:h-2/4 flex items-center justify-center py-10 filter brightness-100"
+            style="background-image: url('img/320362696_897356781630472_1264962660336226523_n.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; margin-top: 190px;">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="text-center p-4 z-10 mt-8">
+                <h1 class="font-bold text-lg text-pink-600 uppercase">
+                    Le Lotus Bungalow
+                    <br><span class="text-green-600 text-4xl">Les Tarifs</span>
+                </h1>
+            </div>
+        </div>
+        <div class="flex flex-col-reverse md:flex-row justify-around w-full pt-4 md:text_tarif">
+            <div class="w-full md:w-1/2 flex flex-col px-4 py-16">
+                <h1 class="text-2xl py-2">Les tarifs sont divisés en 2 périodes distincts :</h1>
+                <div class="flex flex-col sm:flex-row w-full md:flex-col justify-around px-4 lg:px-16">
+                    <h1 class="text-3xl font-bold text-pink-600 mx-2 md:mx-2 my-4 py-4 text-center cursor-pointer w-full md:w-3/5 border border-pink-600 hover:bg-pink-600 hover:text-white hover:rounded-2xl transition-all"
+                        id="tarif_card1">Haute Saison</h1>
+                    <h1 class="text-3xl font-bold text-pink-600 mx-2 md:mx-2 my-4 py-4 text-center cursor-pointer w-full md:w-3/5 border border-pink-600 hover:bg-pink-600 hover:text-white hover:rounded-2xl transition-all"
+                        id="tarif_card2">Bas Saison</h1>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 h-96 overflow-hidden relative">
+                <div class="h-96 w-full absolute" data-aos="zoom-out">
+                    <img src="img/R.png" alt="image_tarif" class="image_tarif w-full h-full object-contain"
+                        id="image_tarif">
+                </div>
+                <div class="px-8 h-96 py-8 -translate-y-0 opacity-0 border-2 border-purple-600 rounded-lg"
+                    id="text1_card">
+                    <h3 class="text-2xl text-pink-600 py-4 font-bold">Famille :</h3>
+                    <div class="px-4 py-2 text-2xl">
+                        <p>&#8226; 6 personnes: 120 000 Ar</p>
+                        <p>&#8226; 5 personnes: 115 000Ar, 120 000 Ar (avec cuisine)</p>
+                        <p>&#8226; 4 personnes: 110 000Ar</p>
+                    </div>
+                    <h3 class="text-2xl text-green-600 py-4 font-bold">En couple :</h3>
+                    <div class="px-4 py-2 text-2xl">
+                        <p>&#8226; 85 000 Ar et 75 000Ar </p>
+                    </div>
+                </div>
+                <div class="px-8 h-96 py-8 -translate-y-0 opacity-0 border-2 border-purple-600 rounded-lg"
+                    id="text2_card">
+                    <h3 class="text-2xl text-pink-600 py-4 font-bold">Famille :</h3>
+                    <div class="px-4 py-2 text-2xl">
+                        <p>&#8226; 6 personnes: 105 000 Ar</p>
+                        <p>&#8226; 5 personnes: 100 000 Ar</p>
+                        <p>&#8226; 4 personnes: 95 000 Ar</p>
+                    </div>
+                    <h3 class="text-2xl text-green-600 py-4 font-bold">En couple :</h3>
+                    <div class="px-4 py-2 text-2xl">
+                        <p>&#8226; 75 000 Ar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Reservation -->
+    <section class="py-12 my-24" id="reservation_page">
+        <div class="relative w-full flex justify-center items-center">
+            <h1 class="text-3xl font-bold text-pink-600 py-8" style="--D:0; --S:21">Reservation</h1>
+        </div>
+        <form class="w-full form-box" action="#">
+            <div class="flex flex-col sm:flex-row w-full">
+                <div class="w-full sm:w-1/2 px-8 md:px-12">
+                    <div class="input-box">
+                        <input type="text" required id="nom">
+                        <label>Nom</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" required id="mail">
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" required onfocus="(this.type='date')"
+                            onblur="if(!this.value)this.type='text'" id="checkIn">
+                        <label>Début du séjour</label>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col-reverse sm:flex-col sm:w-1/2 px-8 md:px-12">
+                    <div class="input-box">
+                        <input type="number" required id="membre">
+                        <label>Nombre de personnes</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="tel" required id="phone">
+                        <label>N° tel</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" required onfocus="(this.type='date')"
+                            onblur="if(!this.value)this.type='text'" id="checkOut">
+                        <label>Fin du séjour</label>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-row items-center py-4 w-3/4 md:w-1/2 px-8">
+                <button
+                    class="border border-pink-600 w-4/5 sm:w-3/5 md:w-1/2 p-4 font-bold text-xl rounded-2xl text-pink-600 hover:bg-pink-600 hover:text-white transition-all"
+                    id="button_reserver">Reserver</button>
+                <i class="fa-solid fa-circle-check text-3xl text-green-500 mx-8 opacity-0" id="message_reussi"></i>
+            </div>
+        </form>
+    </section>
+    <!--Page de Contacts-->
+    <section id="contacts" class="card4">
+        <div class="bg-cover w-full h-96 md:h-2/4 flex items-center justify-center py-10 filter brightness-100"
+            style="background-image: url('img/EXTERIEUR_10.JPG'); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; margin-top: 50px;">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="text-center p-4 z-10 mt-8">
+                <h1 class="font-bold text-lg text-pink-600 uppercase">
+                    Le Lotus Bungalow
+                    <br><span class="text-green-600 text-4xl">Contacts</span>
+                </h1>
+            </div>
+        </div>
+        <div class="flex flex-wrap bg-cover bg-center w-full"
+            style="background-image: url('img/umbrella-chair-around-outdoor-swimming-pool-hotel-resort-with-sea-ocean-view-travel-vacation.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative;">
+            <div class="absolute inset-0 bg-black opacity-85"></div>
+            <div class="w-full md:w-1/2 p-4 flex justify-center items-center">
+                <div class="bg-transparent p-6 rounded-lg shadow relative w-full md:w-3/4 lg:w-1/2">
+                    <h2 class="text-2xl font-bold text-green-600">Contactez-nous</h2>
+                    <span class="block text-white text-lg mt-4">
+                        <span><span class="text-pink-600">Adresse: </span>au bord de la route nationale numéro 5 (RN5)</span>
+                        <span><br><span class="text-purple-600">Téléphone: </span>033 14 134 32 ou 034 31 377 32</span>
+                        <span><br><span class="text-green-600">Email: </span>lelotus.bungalow@gmail.com</span>
+                    </span>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 p-4 flex justify-center items-center">
+                <div class="relative w-full md:w-full lg:w-full" style="padding-top: 56.25%;">
+                    <img src="img/mapLotus.jpg" class="absolute top-0 left-0 w-full h-full border-none rounded-lg"
+                        alt="mapLotus">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Page du Footer-->
+    <footer class="bg-gray-900 border-green-200">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://www.facebook.com/lelotusfoulpointe/" class="flex items-center">
+                        <img src="img/Logo_sans_fond.png" class="h-14 me-3" alt="Le Lotus Bungalow Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-green-600">
+                            Le Lotus Bungalow
+                        </span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Contacts</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <p>033 14 134 32</p>
+                                <p>034 31 377 32</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Réseaux</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="https://www.facebook.com/lelotusfoulpointe/"
+                                    class="hover:underline">Facebook</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="https://www.instagram.com/" class="hover:underline">Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
+                            Autre Réseau et E-Mail
+                        </h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="https://www.linkedin.com/" class="hover:underline">LinkedIn</a>
+                            </li>
+                            <li class="mb-4">
+                                <p>lelotus.bungalow@gmail.com</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <p class="text-sm text-gray-500 sm:text-start dark:text-gray-400">Copyright © 2024<br>Le Lotus
+                    Bungalow<br>Tous droits réservés.<br>
+                    <span class="text-purple-600">Created by Rajharit77 & Aina Elie (CodeV)</span>
+                </p>
+                <div class="flex mt-4 sm:justify-center sm:mt-0">
+                    <a href="https://www.facebook.com/lelotusfoulpointe/"
+                        class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                        <div class="w-7 h-7 -top-full rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"
+                                class="hover:fill-green-600">
+                                <path fill="#f33cfc"
+                                    d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                            </svg>
+                        </div>
+                        <span class="sr-only">Facebook page</span>
+                    </a>
+                    <a href="https://www.instagram.com/" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                        <div class="w-7 h-7 -top-full rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"
+                                class="hover:fill-green-600">
+                                <path fill="#f33cfc"
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                        </div>
+                        <span class="sr-only">Instagram Page</span>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="text-gray-500 hover:text-gray-900 hover:bg-contain ms-5">
+                        <div class="w-7 h-7 -top-full rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"
+                                class="hover:fill-green-600">
+                                <path fill="#f33cfc"
+                                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                            </svg>
+                        </div>
+                        <span class="sr-only">LinkedIn Page</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
